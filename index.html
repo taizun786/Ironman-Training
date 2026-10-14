@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="70.3 Training">
+<meta name="theme-color" content="#10161d">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFJUlEQVR42u2dsVEYMRBFQUMBRGSUwDh3H+6BiGIcuQf34ZxxQw6cMGMDdzpp9//d9zPDmDntPn2tdNLp9v7h8Qah/2kQAgQcCDgQcCDgQMCBgAMBBwIOBBwIOBACDgQcCDgQcCDgQMCBgAMBBwIOBBwIAQcCDjSvu57N/v3969n/8vTyq1uUbpscapqgAVYqw7EciG6gVIMjDIgOoNSBIx2LeojYwyHFRDFKjOEQx6IAIpZwGGFhjYgZHKZYmCJiA0cBLOwQ8YBjBxmn0pP+AMCxNysLk6H5VL3guJ6DgNBbPGQ1OK4EPSXcdg9sCcd0lEVC7P78unDMRVaw5xVoiBYc9bZZWLdICI6zcTRaTTJt2iB8ATr7tCIrfhLOcSoW1u85vVo6iJeshaT7R7JzHG9/sa14Fg0fBEjcQhL9Y0AGfGjBARkWfCTUHAfb2eoQkWZMhnuX6mYhleE40kUaHjw82OrgwWWokYF0YjjUWtXTNk61PYyP4Rgd+CgFB6WGY/ExIAM+zKayqMWwgm34msedRRTK6MuPb2//+fr88+PI5E7+98LBwsZ7WLz94ceIfBrhfb1rYBtZZBz5bW58NsLxqW1AxhI+9tkzsxUUDge2cdw2ZM0D55Ago5dzYBtryUiJ2BY4mMHGe8aOmCc4B+uhLnEbFgh3sI0rS2GbIk9BShEqA0ftMWWajIO2we5zyFDR4hdvbQuOrDrj3/gvdJdQ56g6pkSSERlDhpUingEckGELR7eCQ5OMhVmIc45iBUfiekZYJBlWmLUCh4C8yAAOitAQOJpUoxZkrMpFkHPUqEZ1yIiJJ8MKo8m7ujPNTXDQG5LhAcems2KQYT+sTJ8Vg4zicFw8KwYZFKSQ0Q+OJWfFgskoptG5ly//a5Vso9Swkt7Xi5FRreZYwgelRtmC9CIfkOEBx3TEp/mAjBZT2Yk0Q4YZHFdCfyrZkJEJx/QOgwA+HMkw+7z1vh0Gr88/99UfJT1jVS5sao4dfDCa1ClI1/IBGdVmK6v44NWJFhyraqjrfLi/OrG8qSlsF3H8+pjRgOL6CQZfPlqVGvZwRCasJxk37leHBqRNjQzjq0PjDy9tTZ6dZ6yNf4UXb5tS2HY0SYNjkysuT6QmGZWvK3fxDzxjFxyJZ6aXJNWXjOWRT3COrd54MbXKZMR/5GJYIMygkBLzUbITzPGBbZQtSC9mmiI0Do7ECy8n8i1ORtZtihykRhlwuJgHtiHqHOl8uJOxVXs/+/T08kvhE5R/Ccj9qpjRDDYIjoOdI2ZdxI6G9H41FNDmQsm5mOzuVMxWUCocmIejbdxIfd4aPqTIkBtW4EMqAnI3NXXm42Dba97UVPs66noxVLyuvKd56JQa6lPZbnxotvf2/uFRORblRyLlUOQ4x/F21rYQ8U6SNqzAh759ZtYcnfmwGFhzao7pxBcoQYzamz9bOdV+dwvx6gn5zjGXdTsLcWygyjrH2Vh4WYgp+irOMZ1ycQuxbpEWHNOWIIhIgYbIwXFlyBCJrPvzS8NxvapIibLdAxvDsaTqDAi6xUMWhGPtrGRhDjSfqh0c+yau6Ytv+ks1HnDclHu9YrGIZwNHGUSM1nbN4LBGxG7J3xIOO0RMXyYbw2GBiPUeA3s4NCmpsfW1DhwiiFTaEV0NjhRQqm6RrwzHVlA6nN7rAsd1Vhqe5WwKBzoivuyDgAMBBwIOBBwIOBBwIOBAwIGAAwEHQsCBgAMBBwIOBBwIOBBwIOBAwIGAAyHgQJ/rD2hSpOyz0b7bAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFJUlEQVR42u2dsVEYMRBFQUMBRGSUwDh3H+6BiGIcuQf34ZxxQw6cMGMDdzpp9//d9zPDmDntPn2tdNLp9v7h8Qah/2kQAgQcCDgQcCDgQMCBgAMBBwIOBBwIOBACDgQcCDgQcCDgQMCBgAMBBwIOBBwIAQcCDjSvu57N/v3969n/8vTyq1uUbpscapqgAVYqw7EciG6gVIMjDIgOoNSBIx2LeojYwyHFRDFKjOEQx6IAIpZwGGFhjYgZHKZYmCJiA0cBLOwQ8YBjBxmn0pP+AMCxNysLk6H5VL3guJ6DgNBbPGQ1OK4EPSXcdg9sCcd0lEVC7P78unDMRVaw5xVoiBYc9bZZWLdICI6zcTRaTTJt2iB8ATr7tCIrfhLOcSoW1u85vVo6iJeshaT7R7JzHG9/sa14Fg0fBEjcQhL9Y0AGfGjBARkWfCTUHAfb2eoQkWZMhnuX6mYhleE40kUaHjw82OrgwWWokYF0YjjUWtXTNk61PYyP4Rgd+CgFB6WGY/ExIAM+zKayqMWwgm34msedRRTK6MuPb2//+fr88+PI5E7+98LBwsZ7WLz94ceIfBrhfb1rYBtZZBz5bW58NsLxqW1AxhI+9tkzsxUUDge2cdw2ZM0D55Ago5dzYBtryUiJ2BY4mMHGe8aOmCc4B+uhLnEbFgh3sI0rS2GbIk9BShEqA0ftMWWajIO2we5zyFDR4hdvbQuOrDrj3/gvdJdQ56g6pkSSERlDhpUingEckGELR7eCQ5OMhVmIc45iBUfiekZYJBlWmLUCh4C8yAAOitAQOJpUoxZkrMpFkHPUqEZ1yIiJJ8MKo8m7ujPNTXDQG5LhAcems2KQYT+sTJ8Vg4zicFw8KwYZFKSQ0Q+OJWfFgskoptG5ly//a5Vso9Swkt7Xi5FRreZYwgelRtmC9CIfkOEBx3TEp/mAjBZT2Yk0Q4YZHFdCfyrZkJEJx/QOgwA+HMkw+7z1vh0Gr88/99UfJT1jVS5sao4dfDCa1ClI1/IBGdVmK6v44NWJFhyraqjrfLi/OrG8qSlsF3H8+pjRgOL6CQZfPlqVGvZwRCasJxk37leHBqRNjQzjq0PjDy9tTZ6dZ6yNf4UXb5tS2HY0SYNjkysuT6QmGZWvK3fxDzxjFxyJZ6aXJNWXjOWRT3COrd54MbXKZMR/5GJYIMygkBLzUbITzPGBbZQtSC9mmiI0Do7ECy8n8i1ORtZtihykRhlwuJgHtiHqHOl8uJOxVXs/+/T08kvhE5R/Ccj9qpjRDDYIjoOdI2ZdxI6G9H41FNDmQsm5mOzuVMxWUCocmIejbdxIfd4aPqTIkBtW4EMqAnI3NXXm42Dba97UVPs66noxVLyuvKd56JQa6lPZbnxotvf2/uFRORblRyLlUOQ4x/F21rYQ8U6SNqzAh759ZtYcnfmwGFhzao7pxBcoQYzamz9bOdV+dwvx6gn5zjGXdTsLcWygyjrH2Vh4WYgp+irOMZ1ycQuxbpEWHNOWIIhIgYbIwXFlyBCJrPvzS8NxvapIibLdAxvDsaTqDAi6xUMWhGPtrGRhDjSfqh0c+yau6Ytv+ks1HnDclHu9YrGIZwNHGUSM1nbN4LBGxG7J3xIOO0RMXyYbw2GBiPUeA3s4NCmpsfW1DhwiiFTaEV0NjhRQqm6RrwzHVlA6nN7rAsd1Vhqe5WwKBzoivuyDgAMBBwIOBBwIOBBwIOBAwIGAAwEHQsCBgAMBBwIOBBwIOBBwIOBAwIGAAyHgQJ/rD2hSpOyz0b7bAAAAAElFTkSuQmCC">
+<title>Road to Apr 4 — 70.3 Training Calendar</title>
+<style>
+  :root{
+    --bg:#10161d;
+    --surface:#1a222b;
+    --line:#2a3542;
+    --text:#e7ecf1;
+    --muted:#8a97a3;
+    --amber:#e3a857;
+    --teal:#4fb6a8;
+    --rust:#b5533c;
+    --done:#3fae72;
+    --font-display:Georgia,'Iowan Old Style','Palatino Linotype',Palatino,serif;
+    --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;background:var(--bg);}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);min-height:100vh;-webkit-tap-highlight-color:transparent;}
+  .wrap{max-width:640px;margin:0 auto;padding:calc(24px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) calc(60px + env(safe-area-inset-bottom)) calc(18px + env(safe-area-inset-left));}
+  .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+  h1{font-family:var(--font-display);font-weight:700;font-size:30px;line-height:1.1;margin:0 0 4px;}
+  .sub{color:var(--muted);font-size:13.5px;margin-bottom:8px;}
+  .save-status{font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--muted);margin-bottom:14px;min-height:16px;line-height:1.4;}
+  .save-status.ok{color:var(--done);}
+  .save-status.warn{color:var(--amber);}
+
+  .fatal{display:none;position:fixed;top:0;left:0;right:0;z-index:99;background:#5a1f14;color:#fff;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;white-space:pre-wrap;word-break:break-word;}
+
+  .toolbar{display:flex;gap:8px;margin-bottom:14px;}
+  .pill{background:var(--surface);border:1px solid var(--line);color:var(--text);font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 16px;border-radius:100px;cursor:pointer;min-height:40px;}
+  .pill.on{border-color:var(--amber);color:var(--amber);}
+
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px;}
+  .panel[hidden]{display:none;}
+  .panel h2{font-family:var(--font-display);font-weight:600;font-size:18px;margin:0 0 6px;}
+  .panel h3{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 6px;font-weight:400;}
+  .help{color:var(--muted);font-size:12.5px;line-height:1.55;margin:0 0 10px;}
+  .help code{font-family:var(--font-mono);color:var(--text);font-size:12px;}
+  label.fl{display:block;font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:12px 0 4px;}
+  .in{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:16px;font-family:var(--font-body);min-height:42px;}
+  .in:focus{outline:none;border-color:var(--amber);}
+  textarea.in{font-family:var(--font-mono);line-height:1.45;min-height:180px;white-space:pre;overflow:auto;resize:vertical;}
+  select.in{appearance:none;-webkit-appearance:none;}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center;}
+  .btn{background:var(--bg);border:1px solid var(--line);color:var(--text);font-family:var(--font-body);font-size:14px;padding:10px 14px;border-radius:10px;cursor:pointer;min-height:42px;}
+  .btn:disabled{opacity:.35;cursor:default;}
+  .btn.primary{background:var(--amber);border-color:var(--amber);color:#10161d;font-weight:600;}
+  .btn.danger{color:var(--rust);border-color:rgba(181,83,60,.5);}
+  .btn.armed{background:var(--rust);border-color:var(--rust);color:#fff;font-weight:600;}
+  .msg{font-size:13px;line-height:1.5;margin-top:10px;min-height:18px;word-break:break-word;}
+  .msg.ok{color:var(--done);}
+  .msg.err{color:#e0836c;}
+  .msg ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:12.5px;line-height:1.5;}
+  .chk{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-top:8px;}
+
+  .stats{display:flex;gap:10px;margin-bottom:18px;}
+  .stat-box{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 14px;}
+  .stat-num{font-family:var(--font-display);font-weight:700;font-size:26px;color:var(--amber);}
+  .stat-label{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;margin-top:2px;}
+  .progress-track{height:4px;background:var(--line);border-radius:2px;margin-top:10px;overflow:hidden;}
+  .progress-fill{height:100%;background:var(--done);width:0%;transition:width .3s ease;}
+
+  .weeknav{display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 8px;margin-bottom:16px;}
+  .weeknav button{background:var(--bg);border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:10px;font-size:18px;cursor:pointer;}
+  .weeknav button:disabled{opacity:.3;cursor:default;}
+  .weeknav-mid{text-align:center;}
+  .weeknav-title{font-family:var(--font-display);font-weight:600;font-size:16px;}
+  .weeknav-phase{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-top:2px;}
+  select.jump{background:transparent;color:var(--muted);border:none;font-family:var(--font-mono);font-size:11px;margin-top:4px;}
+  select.jump option{background:var(--surface);color:var(--text);}
+
+  .day{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;margin-bottom:14px;transition:border-color .2s ease, background .2s ease;}
+  .day.done{border-color:var(--done);background:#162019;}
+  .day.race{border-color:var(--amber);background:#241c12;}
+  .day-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;cursor:pointer;}
+  .day-date{font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;}
+  .day-title{font-family:var(--font-display);font-weight:600;font-size:19px;margin:2px 0 8px;}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em;padding:3px 8px;border-radius:100px;border:1px solid var(--line);color:var(--muted);}
+  .tag.gym{color:var(--amber);border-color:rgba(227,168,87,.35);}
+  .tag.run,.tag.hike{color:var(--rust);border-color:rgba(181,83,60,.35);}
+  .tag.bike,.tag.swim,.tag.brick{color:var(--teal);border-color:rgba(79,182,168,.35);}
+  .tag.rest{color:var(--muted);}
+  .tag.race{color:var(--amber);border-color:rgba(227,168,87,.6);font-weight:600;}
+
+  .check{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;background:transparent;cursor:pointer;transition:all .2s ease;}
+  .check svg{opacity:0;transition:opacity .15s ease;width:14px;height:14px;}
+  .day.done .check{background:var(--done);border-color:var(--done);}
+  .day.race .check{background:var(--amber);border-color:var(--amber);}
+  .day.done .check svg,.day.race .check svg{opacity:1;}
+
+  .details{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  .day.open .details{max-height:3000px;margin-top:14px;}
+  .day.editing .details{max-height:none;overflow:visible;margin-top:14px;transition:none;}
+  .block{margin-bottom:10px;}
+  .block:last-child{margin-bottom:0;}
+  .block-label{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:5px;}
+  ul{margin:0;padding-left:18px;font-size:14px;line-height:1.7;color:#c9d2da;}
+  .rest-note,.race-note{color:var(--muted);font-size:14px;font-style:italic;}
+  .race-note{color:var(--amber);font-style:normal;font-weight:500;}
+  .today-marker{display:inline-block;margin-left:8px;font-family:var(--font-mono);font-size:9.5px;color:var(--done);border:1px solid var(--done);border-radius:100px;padding:1px 6px;letter-spacing:.06em;}
+  .note{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;line-height:1.6;}
+
+  .editbar{background:#241c12;border:1px solid rgba(227,168,87,.5);color:var(--amber);border-radius:12px;padding:10px 14px;font-size:12.5px;line-height:1.5;margin-bottom:14px;}
+  .erow{display:flex;gap:6px;margin:0 0 6px;align-items:center;}
+  .erow .in{flex:1;min-width:0;padding:8px 10px;}
+  .erow .in.title{font-family:var(--font-display);font-weight:600;}
+  .erow .in.lbl{font-family:var(--font-mono);font-size:16px;color:var(--teal);}
+  .erow.item{margin-left:14px;}
+  .xbtn{background:var(--bg);border:1px solid var(--line);color:var(--muted);min-width:42px;height:42px;border-radius:10px;font-size:15px;cursor:pointer;flex-shrink:0;padding:0 8px;}
+  .xbtn.armed{background:var(--rust);border-color:var(--rust);color:#fff;font-size:12px;font-weight:600;}
+  .erow.add{margin-left:14px;margin-top:4px;}
+  .erow.add .btn{flex-shrink:0;}
+  .blockgap{height:10px;}
+  .title-edit{margin:6px 0 10px;}
+</style>
+</head>
+<body>
+<div id="fatal" class="fatal" role="alert"></div>
+<script>
+/* Runs first: any error anywhere shows on screen instead of leaving a silent blank page. */
+(function(){
+  function show(m){ var el=document.getElementById('fatal'); if(!el) return; el.style.display='block'; el.textContent='Something broke: '+m; }
+  window.addEventListener('error', function(e){ show((e.message||'error')+(e.lineno?' (line '+e.lineno+')':'')); });
+  window.addEventListener('unhandledrejection', function(e){ show((e.reason&&e.reason.message)||String(e.reason)); });
+})();
+</script>
+<div class="wrap">
+  <div class="eyebrow">70.3 Training</div>
+  <h1>Road to Apr 4</h1>
+  <div class="sub">Tap a day to see the session. Tap the circle to mark it done.</div>
+  <div class="save-status" id="saveStatus" role="status" aria-live="polite"></div>
+
+  <div class="toolbar">
+    <button class="pill" id="btnEdit" data-act="edit">Edit</button>
+    <button class="pill" id="btnText" data-act="panel" data-id="text">Text</button>
+    <button class="pill" id="btnSync" data-act="panel" data-id="sync">Sync</button>
+  </div>
+
+  <div class="panel" id="panelSync" hidden>
+    <h2>Sync setup</h2>
+    <p class="help">Your ticks and edits are always saved on this device first. To share them across devices, mirror them to a JSONBin bin. Create a <b>new bin just for this calendar</b> (don't reuse The Workbench's) at jsonbin.io with the content <code>{"app":"training-tracker"}</code>, then paste its Bin ID and your Master Key here.</p>
+    <label class="fl" for="binId">Bin ID</label>
+    <input class="in" id="binId" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="e.g. 66f1a2b3e41b4d34e4…">
+    <label class="fl" for="binKey">Master Key</label>
+    <input class="in" id="binKey" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="$2a$10$…">
+    <label class="chk"><input type="checkbox" id="showKey"> Show key</label>
+    <div class="row">
+      <button class="btn primary" id="btnSyncSave" data-act="syncsave">Save and test</button>
+      <button class="btn" id="btnSyncNow" data-act="syncnow">Sync now</button>
+      <button class="btn danger" id="btnDisconnect" data-act="disconnect" data-armtext="Tap again to disconnect">Disconnect</button>
+    </div>
+    <div class="msg" id="syncMsg"></div>
+    <p class="help">The key is stored only in this browser's local storage on this device, never in the bin or the page.</p>
+  </div>
+
+  <div class="panel" id="panelText" hidden>
+    <h2>Text export / import</h2>
+    <p class="help">Export gives you the whole plan as plain text (with each item's <code>[id]</code>) — a backup you can paste anywhere. Paste edited text into Import to change content without redeploying.</p>
+
+    <h3>Export</h3>
+    <select class="in" id="expScope" aria-label="Export scope">
+      <option value="all">All weeks</option>
+      <option value="week">This week only</option>
+    </select>
+    <textarea class="in" id="expText" readonly wrap="off" spellcheck="false" placeholder="Tap “Show export text”"></textarea>
+    <div class="row">
+      <button class="btn primary" data-act="export">Show export text</button>
+      <button class="btn" data-act="selectexp">Select all</button>
+    </div>
+    <div class="msg" id="expMsg"></div>
+
+    <h3>Import</h3>
+    <textarea class="in" id="impText" wrap="off" spellcheck="false" autocapitalize="off" autocorrect="off" placeholder="Paste text here. Each WEEK section you include replaces that week."></textarea>
+    <div class="row">
+      <button class="btn" data-act="impreview">Preview import</button>
+      <button class="btn primary" id="btnImpApply" data-act="impapply" disabled>Apply</button>
+      <button class="btn" id="btnUndo" data-act="undo" hidden>Undo last change</button>
+    </div>
+    <div class="msg" id="impMsg"></div>
+    <p class="help">Format: <code>WEEK 3</code> then day lines <code>[w3-tue] [x] Title</code>, sections indented 2 spaces <code>[id] Label</code>, items indented 4 spaces <code>[id] Text</code>. A line with no <code>[id]</code> becomes a new section (2 spaces) or item (4 spaces). Anything left out of a WEEK you paste is removed from that week.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-num" id="daysLeft">—</div>
+      <div class="stat-label">Days to race</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" id="totalDone">0/0</div>
+      <div class="stat-label">Sessions done</div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+  </div>
+
+  <div class="weeknav">
+    <button id="prevBtn" aria-label="Previous week">‹</button>
+    <div class="weeknav-mid">
+      <div class="weeknav-title" id="weekTitle">Week 1</div>
+      <div class="weeknav-phase" id="weekPhase">Base</div>
+      <select class="jump" id="jumpSelect" aria-label="Jump to week"></select>
+    </div>
+    <button id="nextBtn" aria-label="Next week">›</button>
+  </div>
+
+  <div id="days"></div>
+
+  <div class="note">25 weeks, Oct 12 – Apr 4. Tuesday's run, Wednesday's ride, Thursday's hike, and Friday's swim all keep a fixed time cap every week — the distance you cover in that time is what climbs, not the clock. Tuesday stays structured HIIT (4×3min fast/2min slow). Saturday's brick is the exception: swim (20min) and bike (1hr) stay fixed-time, but the run is distance-based, building from 5K to 10K by week 13. Targets build weeks 1–13, hold steady weeks 14–22, then ease off for the Mar 15 taper. Brick stays Saturday, circuit Sunday, Monday rest. Gym exercises rotate through the block. Taps save to this device instantly and sync through your JSONBin copy.</div>
+</div>
+
+<script>
+"use strict";
+
+/* =====================================================================
+   1. CONSTANTS  (everything the page needs is declared before boot())
+   ===================================================================== */
+const APP_ID = "training-tracker";
+const DATA_V = 1;            // data-object schema version
+const PUB_VERSION = 1;       // bump when the published plan below changes structure
+const LS_DATA = "trainingTracker.data.v1";
+const LS_CFG  = "trainingTracker.cfg.v1";
+const LS_UNDO = "trainingTracker.undo.v1";
+const JSONBIN = "https://api.jsonbin.io/v3/b/";
+const EPOCH = "1970-01-01T00:00:00.000Z";
+const PUSH_DEBOUNCE = 800;
+const FOCUS_THROTTLE = 8000;
+const FETCH_TIMEOUT = 15000;
+const ARM_MS = 3500;
+
+const PLAN_START = new Date(2026,9,12); // Mon Oct 12, 2026
+const RACE_DATE = new Date(2027,3,4);   // Sun Apr 4, 2027
+const DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const DOWID = ["mon","tue","wed","thu","fri","sat","sun"];
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const TOTAL_WEEKS = 25;
+const BUILD_END = 13;   // targets climb through week 13, hold weeks 14-22, taper 23-24, race week 25
+const PHASE_LABEL = {base:"Base", build:"Build", peak:"Peak", taper:"Taper", raceweek:"Race Week"};
+
+const METRICS = {
+  run:       {cap:25, unit:"mi", start:2.2, end:3.0, taper:1.6},
+  bike:      {cap:45, unit:"mi", start:10.0, end:12.0, taper:7.0},
+  hike:      {cap:45, unit:"mi", start:2.0, end:2.7, taper:1.3},
+  swim:      {cap:30, unit:"yd", start:700, end:900, taper:500},
+  brickSwim: {cap:20, unit:"yd", start:600, end:800, taper:450},
+  brickBike: {cap:60, unit:"mi", start:13.5, end:16.0, taper:9.0}
+};
+
+const GYM = {
+  base: {
+    A: {
+      upper: {label:"Gym — Upper Body / Arms (40 min)", items:["Push-ups — 3×12–15","Pull-ups or lat pulldown — 3×8–10","Dumbbell shoulder press — 3×10","Bent-over rows — 3×10","Triceps dips — 3×12","Plank shoulder taps — 3×20"]},
+      legs: {label:"Gym — Legs (40 min, kept light)", items:["Goblet squats — 3×12","Romanian deadlifts — 3×10","Walking lunges — 3×12/leg","Step-ups — 3×10/leg","Calf raises — 3×15"]},
+      core: {label:"Gym — Core (25–30 min)", items:["Front plank — 3×45s","Side plank — 3×30s/side","Wood chop (cable or band) — 3×12/side","Dead bug — 3×10/side","Bicycle crunches — 3×20"]}
+    },
+    B: {
+      upper: {label:"Gym — Upper Body / Arms (40 min)", items:["Incline push-ups — 3×12","Single-arm dumbbell row — 3×10/side","Lateral raises — 3×12","Face pulls (band or cable) — 3×15","Close-grip push-ups — 3×10","Bird dogs — 3×10/side"]},
+      legs: {label:"Gym — Legs (40 min, kept light)", items:["Bodyweight back squats — 3×15","Single-leg RDL — 3×8/leg","Reverse lunges — 3×12/leg","Box step-ups — 3×10/leg","Standing calf raises — 3×20"]},
+      core: {label:"Gym — Core (25–30 min)", items:["Side plank with reach-under — 3×10/side","Russian twists — 3×20","Superman — 3×12","Hollow hold — 3×20s","Mountain climbers — 3×20"]}
+    }
+  },
+  build: {
+    A: {
+      upper: {label:"Gym — Upper Body / Arms (30 min, maintenance load)", items:["Pull-ups — 3×8–10","Push-ups, feet elevated — 3×12","Bent-over rows — 3×10","Medicine ball chest pass — 3×8","Plank shoulder taps — 2×20"]},
+      legs: {label:"Gym — Legs (30 min, maintenance load)", items:["Box step-ups — 3×10/leg","Single-leg RDL — 3×10/leg","Bulgarian split squat — 3×8/leg","Low box jumps — 3×6","Calf raises — 2×15"]},
+      core: {label:"Gym — Core (20–25 min)", items:["Wood chop — 3×12/side","Side plank with rotation — 3×10/side","Hanging or lying leg raises — 3×12","Dead bug — 2×10"]}
+    },
+    B: {
+      upper: {label:"Gym — Upper Body / Arms (30 min, maintenance load)", items:["Pull-ups — 3×8","Dumbbell shoulder press — 3×10","Single-arm row — 3×10/side","Triceps dips — 3×12","Face pulls — 2×15"]},
+      legs: {label:"Gym — Legs (30 min, maintenance load)", items:["Goblet squats — 3×12","Walking lunges — 3×12/leg","Single-leg glute bridge — 3×10/leg","Box jumps — 3×6","Calf raises — 2×15"]},
+      core: {label:"Gym — Core (20–25 min)", items:["Weighted Russian twists — 3×20","Front plank with shoulder taps — 3×30s","Superman — 3×12","Bicycle crunches — 2×20"]}
+    }
+  },
+  peak: {
+    upper: {label:"Gym — Upper Body (20 min, light/maintenance)", items:["Banded pull-aparts — 2×15","Light push-ups — 2×10","Face pulls — 2×12","Shoulder mobility flow — 2×10"]},
+    legs: {label:"Gym — Legs (20 min, light/maintenance)", items:["Bodyweight squats — 2×12","Single-leg glute bridge — 2×10/leg","Calf raises — 2×15","Hip mobility flow"]},
+    core: {label:"Gym — Core (15 min, light)", items:["Front plank — 2×30s","Dead bug — 2×8/side","Bird dog — 2×8/side"]}
+  }
+};
+
+const SUN_NOTE = {
+  base: "Your online circuit program — 3 sets, moderate effort.",
+  build: "Your online circuit program — 3 sets. Keep effort moderate; the fixed-time cardio days are already asking a lot.",
+  peak: "Your online circuit program — light effort, or trim to 2 sets.",
+  taper: "Your online circuit program — 1–2 easy sets only, or skip if legs feel at all heavy."
+};
+
+/* The published plan, generated once. Every day / section / item gets a stable ID:
+     day      w3-tue          title    w3-tue.t
+     section  w3-tue.b0       item     w3-tue.b0.i2
+   Custom additions get c-xxxx IDs. */
+const PLAN = buildAll();
+const PUB_INDEX = indexPlan(PLAN);
+const TOTAL_SESSIONS = PLAN.reduce((sum,w) => sum + w.days.filter(d=>!d.rest && !d.race).length, 0);
+
+const ID_RE = /^\[((?:w\d{1,2}-(?:mon|tue|wed|thu|fri|sat|sun)(?:\.t|\.b\d+(?:\.i\d+)?)?)|c-[a-z0-9]+)\]\s?(.*)$/;
+
+/* =====================================================================
+   2. STATE  (declared before the first render)
+   ===================================================================== */
+let data = newData();          // the shared object: done / del / edit / add + updated
+let cfg = null;                // {binId, key, synced} or null (local-only)
+let currentWeek = 1;
+let editMode = false;
+let panelOpen = null;          // null | "sync" | "text"
+let openDays = new Set();
+let armedBtn = null;
+let armedTimer = null;
+let syncBusy = false;
+let syncAgain = false;
+let pushTimer = null;
+let retryTimer = null;
+let retryDelay = 0;
+let lastPull = 0;
+let lsOk = true;
+let pendingRender = false;
+let importNext = null;         // computed-but-not-applied import
+let statusKind = "local";
+let statusExtra = "";
+let statusRetry = true;
+let lastSyncedAt = "";
+
+const $ = (id) => document.getElementById(id);
+const daysEl = $("days");
+const jumpSelect = $("jumpSelect");
+const statusEl = $("saveStatus");
+
+/* =====================================================================
+   3. PLAN GENERATION (ported 1:1 from the calendar artifact, plus IDs)
+   ===================================================================== */
+function addDays(d,n){ const r=new Date(d); r.setDate(r.getDate()+n); return r; }
+function fmt(d){ return DOW[(d.getDay()+6)%7] + " · " + MON[d.getMonth()] + " " + d.getDate(); }
+function sameDay(a,b){ return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate(); }
+function phaseFor(weekNum){
+  if(weekNum<=8) return "base";
+  if(weekNum<=16) return "build";
+  if(weekNum<=22) return "peak";
+  if(weekNum<=24) return "taper";
+  return "raceweek";
+}
+function metricVal(m, weekNum){
+  let v;
+  if(weekNum<=BUILD_END){ const t=(weekNum-1)/(BUILD_END-1); v = m.start + (m.end-m.start)*t; }
+  else if(weekNum<=22){ v = m.end; }
+  else { v = m.taper; }
+  return m.unit==="yd" ? Math.round(v/25)*25 : Math.round(v*10)/10;
+}
+function brickRunKm(weekNum){
+  let km;
+  if(weekNum<=BUILD_END){ const t=(weekNum-1)/(BUILD_END-1); km = 5 + (10-5)*t; }
+  else if(weekNum<=22){ km = 10; }
+  else { km = 6; }
+  return Math.round(km*2)/2;
+}
+function gymFor(phase, weekIdx){
+  if(phase==="base") return GYM.base[weekIdx%2===0 ? "A":"B"];
+  if(phase==="build") return GYM.build[weekIdx%2===0 ? "A":"B"];
+  return GYM.peak;
+}
+function withIds(dayId, blocks){
+  return (blocks||[]).map(function(b,bi){
+    const bid = dayId + ".b" + bi;
+    return {id:bid, label:b.label, items:b.items.map(function(t,ii){ return {id: bid + ".i" + ii, t:t}; })};
+  });
+}
+function buildWeek(weekNum){
+  const idx = weekNum-1;
+  const phase = phaseFor(weekNum);
+  const monday = addDays(PLAN_START, idx*7);
+  const dates = [0,1,2,3,4,5,6].map(o => addDays(monday,o));
+  let rawDays, outPhase = phase;
+
+  if(phase === "raceweek"){
+    outPhase = "taper";
+    rawDays = [
+      {date:dates[0], title:"Rest", tags:[{t:"rest",l:"REST"}], rest:true},
+      {date:dates[1], title:"Easy Shakeout", tags:[{t:"run",l:"RUN · EASY"}],
+        blocks:[{label:"Run — 10 min, easy", items:["Easy conversational pace, legs only — no intensity"]},
+                {label:"Gym", items:["Skip, or 10 min light mobility only"]}]},
+      {date:dates[2], title:"Easy Spin", tags:[{t:"bike",l:"BIKE · EASY"}],
+        blocks:[{label:"Bike — 15 min, easy", items:["Zone 1–2, just turning the legs over"]},
+                {label:"Gym", items:["Skip"]}]},
+      {date:dates[3], title:"Rest or Easy Walk", tags:[{t:"rest",l:"REST"}], rest:true,
+        blocks:[{label:"Optional 15 min easy walk", items:["Skip entirely if you feel any fatigue at all"]}]},
+      {date:dates[4], title:"Easy Swim + Gear Check", tags:[{t:"swim",l:"SWIM · EASY"}],
+        blocks:[{label:"Swim — 10–15 min, easy", items:["No hard effort — just loosen up"]},
+                {label:"Gear check", items:["Lay out wetsuit/tri kit, nutrition, goggles, race numbers"]}]},
+      {date:dates[5], title:"Activation", tags:[{t:"bike",l:"BIKE"},{t:"run",l:"STRIDES"}],
+        blocks:[{label:"Short activation", items:["10 min easy bike spin","4×20s relaxed strides","No circuit today — rest the legs"]}]},
+      {date:dates[6], title:"RACE DAY — 70.3", tags:[{t:"race",l:"🏁 RACE DAY"}], race:true,
+        blocks:[{label:"You've done the work", items:["Swim 1.2mi → Bike 56mi → Run 13.1mi","Trust your training and pacing","Go get it."]}]}
+    ];
+  } else {
+    const gym = gymFor(phase, idx);
+    const run = metricVal(METRICS.run, weekNum);
+    const bike = metricVal(METRICS.bike, weekNum);
+    const hike = metricVal(METRICS.hike, weekNum);
+    const swim = metricVal(METRICS.swim, weekNum);
+    const bSwim = metricVal(METRICS.brickSwim, weekNum);
+    const bBike = metricVal(METRICS.brickBike, weekNum);
+    const bRunKm = brickRunKm(weekNum);
+    const bRunMi = Math.round(bRunKm*0.621371*10)/10;
+    rawDays = [
+      {date:dates[0], title:"Rest", tags:[{t:"rest",l:"REST"}], rest:true},
+      {date:dates[1], title:"Upper Body + Run",
+        tags:[{t:"gym",l:"GYM · UPPER"},{t:"run",l:"RUN · HIIT"}],
+        blocks:[gym.upper, {label:"Run — HIIT, " + METRICS.run.cap + " min total, aim for ~" + run + "mi", items:[
+          "5 min easy warm-up jog",
+          "4 × (3 min fast / 2 min slow)",
+          "Same structure every week — get more distance out of the fast reps as your pace improves"
+        ]}]},
+      {date:dates[2], title:"Legs + Ride",
+        tags:[{t:"gym",l:"GYM · LEGS"},{t:"bike",l:"BIKE"}],
+        blocks:[gym.legs, {label:"Bike — " + METRICS.bike.cap + " min total, aim for ~" + bike + "mi", items:[
+          "Zone 2–tempo effort, cadence 85–95rpm",
+          "Fixed 45 minutes — the target distance is what should creep up as your fitness does"
+        ]}]},
+      {date:dates[3], title:"Core + Uphill Hike",
+        tags:[{t:"gym",l:"GYM · CORE"},{t:"hike",l:"HIKE"}],
+        blocks:[gym.core, {label:"Uphill Hike / Power Walk — " + METRICS.hike.cap + " min total, aim for ~" + hike + "mi", items:[
+          "Steady climbing effort, poles optional",
+          "Same 45 minutes every week — cover a bit more ground as your legs adapt"
+        ]}]},
+      {date:dates[4], title:"Recovery Swim", tags:[{t:"swim",l:"SWIM · EASY"}],
+        blocks:[{label:"Swim — " + METRICS.swim.cap + " min, technique/recovery, ~" + swim + "yd", items:[
+          "Easy effort — this is about stroke efficiency, not speed",
+          "Not a workout day — keep heart rate low"
+        ]}]},
+      {date:dates[5], title:"Brick Session",
+        tags:[{t:"brick",l:"SWIM"},{t:"brick",l:"BIKE"},{t:"brick",l:"RUN"}],
+        blocks:[{label:"Brick — swim → bike → run, in that order", items:[
+          "Swim — " + METRICS.brickSwim.cap + " min, aim for ~" + bSwim + "yd",
+          "Bike — " + METRICS.brickBike.cap + " min (~1hr), aim for ~" + bBike + "mi",
+          "Run — " + bRunKm + "K off the bike (~" + bRunMi + "mi)",
+          "Swim and bike stay fixed-time like the rest of the week — the run is the one distance-based target, building from 5K to 10K by week 13"
+        ]}]},
+      {date:dates[6], title:"Weight Circuit", tags:[{t:"gym",l:"CIRCUIT"}],
+        blocks:[{label:"Your Online Circuit Program", items:[SUN_NOTE[phase]]}]}
+    ];
+  }
+  const days = rawDays.map(function(d,i){
+    const id = "w" + weekNum + "-" + DOWID[i];
+    return {id:id, date:d.date, title:d.title, tags:d.tags, rest:!!d.rest, race:!!d.race, blocks:withIds(id, d.blocks)};
+  });
+  return {weekNum:weekNum, phase:outPhase, monday:monday, sunday:dates[6], days:days};
+}
+function buildAll(){ return Array.from({length:TOTAL_WEEKS}, function(_,i){ return buildWeek(i+1); }); }
+function indexPlan(plan){
+  const ix = {};
+  plan.forEach(function(w){
+    w.days.forEach(function(d){
+      ix[d.id] = {kind:"day", t:d.title, week:w.weekNum, parent:null};
+      ix[d.id + ".t"] = {kind:"title", t:d.title, week:w.weekNum, parent:d.id};
+      d.blocks.forEach(function(b){
+        ix[b.id] = {kind:"block", t:b.label, week:w.weekNum, parent:d.id};
+        b.items.forEach(function(it){ ix[it.id] = {kind:"item", t:it.t, week:w.weekNum, parent:b.id}; });
+      });
+    });
+  });
+  return ix;
+}
+
+/* =====================================================================
+   4. DATA MODEL  (published plan + a small overlay of what you changed)
+   ===================================================================== */
+function newData(){ return {app:APP_ID, v:DATA_V, pub:PUB_VERSION, updated:EPOCH, done:{}, del:[], edit:{}, add:[]}; }
+const ISO_RE = /^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?Z$/;
+function hasOwn(o,k){ return Object.prototype.hasOwnProperty.call(o,k); }
+function normalize(o){
+  const d = newData();
+  if(!o || typeof o !== "object" || Array.isArray(o)) return d;
+  if(typeof o.updated === "string" && ISO_RE.test(o.updated)) d.updated = o.updated;
+  if(o.done && typeof o.done === "object"){ for(const k in o.done){ if(o.done[k]) d.done[k] = 1; } }
+  if(Array.isArray(o.del)){ o.del.forEach(function(x){ if(typeof x === "string" && d.del.indexOf(x) < 0) d.del.push(x); }); }
+  if(o.edit && typeof o.edit === "object"){ for(const k in o.edit){ if(typeof o.edit[k] === "string") d.edit[k] = o.edit[k]; } }
+  if(Array.isArray(o.add)){
+    o.add.forEach(function(a){
+      if(a && typeof a.id === "string" && typeof a.p === "string" && (a.k === "i" || a.k === "b") && typeof a.t === "string"
+         && !d.add.some(function(x){ return x.id === a.id; })){
+        d.add.push({id:a.id, p:a.p, k:a.k, t:a.t});
+      }
+    });
+  }
+  return d;
+}
+function hasContent(d){
+  return Object.keys(d.done).length > 0 || d.del.length > 0 || Object.keys(d.edit).length > 0 || d.add.length > 0;
+}
+function nowIso(){
+  let n = new Date().toISOString();
+  if(n <= data.updated) n = new Date(Date.parse(data.updated) + 1).toISOString();
+  return n;
+}
+function newId(){ return "c-" + Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+
+function makeCtx(){
+  const del = new Set(data.del);
+  const addBy = {};
+  data.add.forEach(function(a){ (addBy[a.p] = addBy[a.p] || []).push(a); });
+  return {del:del, addBy:addBy};
+}
+function ov(id, pub){ return hasOwn(data.edit, id) ? data.edit[id] : pub; }
+function effBlock(id, label, pubLabel, custom, pubItems, ctx){
+  const items = [];
+  pubItems.forEach(function(it){
+    if(ctx.del.has(it.id)) return;
+    items.push({id:it.id, t:ov(it.id, it.t), pub:it.t, custom:false});
+  });
+  (ctx.addBy[id] || []).forEach(function(a){
+    if(a.k === "i") items.push({id:a.id, t:a.t, pub:null, custom:true});
+  });
+  return {id:id, label:label, pubLabel:pubLabel, custom:custom, items:items};
+}
+function effDay(day, ctx){
+  const blocks = [];
+  day.blocks.forEach(function(b){
+    if(ctx.del.has(b.id)) return;
+    blocks.push(effBlock(b.id, ov(b.id, b.label), b.label, false, b.items, ctx));
+  });
+  (ctx.addBy[day.id] || []).forEach(function(a){
+    if(a.k === "b") blocks.push(effBlock(a.id, a.t, null, true, [], ctx));
+  });
+  return {id:day.id, title:ov(day.id + ".t", day.title), pubTitle:day.title, blocks:blocks};
+}
+
+/* =====================================================================
+   5. LOCAL STORAGE (instant, offline cache)
+   ===================================================================== */
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ lsOk = false; return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k, v); return true; }catch(e){ lsOk = false; return false; } }
+function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){ lsOk = false; } }
+function saveLocal(){ if(!lsSet(LS_DATA, JSON.stringify(data))) setStatus(statusKind, statusExtra, statusRetry); }
+function saveCfg(){ if(cfg) lsSet(LS_CFG, JSON.stringify(cfg)); else lsDel(LS_CFG); }
+function loadLocal(){
+  try{ const v = lsGet(LS_DATA); if(v) data = normalize(JSON.parse(v)); }catch(e){ data = newData(); }
+  try{
+    const c = lsGet(LS_CFG);
+    if(c){ const o = JSON.parse(c); if(o && typeof o.binId === "string" && typeof o.key === "string" && o.binId && o.key){ cfg = {binId:o.binId, key:o.key, synced:(typeof o.synced === "string" ? o.synced : EPOCH)}; } }
+  }catch(e){ cfg = null; }
+}
+function saveUndo(why){ lsSet(LS_UNDO, JSON.stringify({why:why, at:new Date().toISOString(), data:data})); refreshUndoBtn(); }
+function loadUndo(){ try{ const v = lsGet(LS_UNDO); return v ? JSON.parse(v) : null; }catch(e){ return null; } }
+function refreshUndoBtn(){
+  const u = loadUndo();
+  const b = $("btnUndo");
+  b.hidden = !u;
+  if(u) b.textContent = "Undo: " + u.why.toLowerCase();
+}
+
+function touch(){
+  data.updated = nowIso();
+  saveLocal();
+  schedulePush();
+}
+
+/* =====================================================================
+   6. STATUS LINE
+   ===================================================================== */
+function hhmm(){ const d = new Date(); return String(d.getHours()).padStart(2,"0") + ":" + String(d.getMinutes()).padStart(2,"0"); }
+function setStatus(kind, extra, willRetry){
+  statusKind = kind; statusExtra = extra || ""; statusRetry = (willRetry !== false);
+  let text = "", cls = "";
+  if(!lsOk){ text = "⚠ This browser is blocking local storage — changes may not survive closing the page." + (cfg ? " Sync still works while it's open." : ""); cls = "warn"; }
+  else if(kind === "local"){ text = "Saved on this device only — open Sync to share across devices"; cls = "warn"; }
+  else if(kind === "saving"){ text = "Saving…"; }
+  else if(kind === "checking"){ text = "Checking for updates…"; }
+  else if(kind === "synced"){ text = "Synced ✓ " + lastSyncedAt; cls = "ok"; }
+  else if(kind === "error"){
+    text = "Sync problem: " + statusExtra + " — your changes are safe on this device" + (statusRetry ? " and will retry" : "");
+    cls = "warn";
+  }
+  statusEl.textContent = text;
+  statusEl.className = "save-status" + (cls ? " " + cls : "");
+}
+
+/* =====================================================================
+   7. RENDERING
+   ===================================================================== */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+const CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><path d="M4 12l6 6L20 6"/></svg>';
+
+function renderHeader(){
+  const today = new Date();
+  $("daysLeft").textContent = Math.max(0, Math.ceil((RACE_DATE - today) / 86400000));
+  let done = 0;
+  PLAN.forEach(function(w){ w.days.forEach(function(d){ if(!d.rest && !d.race && data.done[d.id]) done++; }); });
+  $("totalDone").textContent = done + "/" + TOTAL_SESSIONS;
+  $("progressFill").style.width = (done/TOTAL_SESSIONS*100) + "%";
+  const w = PLAN[currentWeek-1];
+  $("weekTitle").textContent = "Week " + w.weekNum + " · " + MON[w.monday.getMonth()] + " " + w.monday.getDate() + "–" + MON[w.sunday.getMonth()] + " " + w.sunday.getDate();
+  $("weekPhase").textContent = PHASE_LABEL[w.phase] + (w.days.some(function(d){ return d.race; }) ? " · Race day this week" : "");
+  jumpSelect.value = String(currentWeek);
+  $("prevBtn").disabled = currentWeek === 1;
+  $("nextBtn").disabled = currentWeek === TOTAL_WEEKS;
+  $("btnEdit").textContent = editMode ? "Done editing" : "Edit";
+  $("btnEdit").classList.toggle("on", editMode);
+  $("btnText").classList.toggle("on", panelOpen === "text");
+  $("btnSync").classList.toggle("on", panelOpen === "sync");
+  $("panelSync").hidden = panelOpen !== "sync";
+  $("panelText").hidden = panelOpen !== "text";
+}
+
+function viewBlock(b){
+  const lis = b.items.filter(function(it){ return it.t.trim() !== ""; }).map(function(it){ return "<li>" + esc(it.t) + "</li>"; }).join("");
+  return '<div class="block"><div class="block-label">' + esc(b.label) + '</div><ul>' + lis + '</ul></div>';
+}
+function editBlock(b){
+  const revert = (b.pubLabel !== null && b.label !== b.pubLabel) ? '<button class="xbtn" data-act="revert" data-id="' + esc(b.id) + '" aria-label="Revert text" title="Revert to original">↺</button>' : "";
+  let h = '<div class="block"><div class="erow"><input class="in lbl" data-edit="' + esc(b.id) + '" value="' + esc(b.label) + '" aria-label="Section title">' + revert +
+          '<button class="xbtn" data-act="del" data-id="' + esc(b.id) + '" data-armtext="Sure?" aria-label="Delete section">✕</button></div>';
+  b.items.forEach(function(it){
+    const rv = (it.pub !== null && it.t !== it.pub) ? '<button class="xbtn" data-act="revert" data-id="' + esc(it.id) + '" aria-label="Revert text" title="Revert to original">↺</button>' : "";
+    h += '<div class="erow item"><input class="in" data-edit="' + esc(it.id) + '" value="' + esc(it.t) + '" aria-label="Item text">' + rv +
+         '<button class="xbtn" data-act="del" data-id="' + esc(it.id) + '" data-armtext="Sure?" aria-label="Delete item">✕</button></div>';
+  });
+  h += '<div class="erow add"><input class="in" data-addfor="' + esc(b.id) + '" placeholder="Add an item…" aria-label="New item"><button class="btn" data-act="additem" data-id="' + esc(b.id) + '">Add</button></div></div>';
+  return h;
+}
+
+function renderDays(){
+  const y = window.scrollY;
+  const w = PLAN[currentWeek-1];
+  const ctx = makeCtx();
+  const today = new Date();
+  const parts = [];
+  if(editMode){
+    parts.push('<div class="editbar">Editing. Change any text directly — it saves as you type. Tap ✕ twice to delete. Use “Add” to put new items or sections in. ↺ puts the original text back.</div>');
+  }
+  w.days.forEach(function(day){
+    const e = effDay(day, ctx);
+    const isDone = !!data.done[day.id];
+    const isOpen = editMode || openDays.has(day.id);
+    const tagsHtml = day.tags.map(function(t){ return '<span class="tag ' + t.t + '">' + esc(t.l) + '</span>'; }).join("");
+    const isToday = sameDay(day.date, today);
+    let detailsHtml;
+    if(editMode){
+      const rvT = (e.title !== e.pubTitle) ? '<button class="xbtn" data-act="revert" data-id="' + esc(day.id + ".t") + '" aria-label="Revert title" title="Revert to original">↺</button>' : "";
+      detailsHtml = '<div class="details"><div class="erow"><input class="in title" data-edit="' + esc(day.id + ".t") + '" value="' + esc(e.title) + '" aria-label="Day title">' + rvT + '</div>' +
+        e.blocks.map(editBlock).join("") +
+        '<div class="erow add" style="margin-left:0"><input class="in" data-addfor="' + esc(day.id) + '" placeholder="Add a section…" aria-label="New section"><button class="btn" data-act="addblock" data-id="' + esc(day.id) + '">Add</button></div></div>';
+    } else if(e.blocks.length === 0){
+      detailsHtml = day.rest ? '<div class="details"><div class="rest-note">Full rest. No training today.</div></div>' : '<div class="details"></div>';
+    } else {
+      detailsHtml = '<div class="details">' + e.blocks.map(viewBlock).join("") + '</div>';
+    }
+    parts.push(
+      '<div class="day' + (isDone ? " done" : "") + (day.race ? " race" : "") + (isOpen ? " open" : "") + (editMode ? " editing" : "") + '">' +
+        '<div class="day-head">' +
+          '<div style="flex:1" class="expand-target" data-act="toggle" data-id="' + esc(day.id) + '">' +
+            '<div class="day-date">' + esc(fmt(day.date)) + (isToday ? '<span class="today-marker">TODAY</span>' : '') + '</div>' +
+            '<div class="day-title">' + esc(e.title) + '</div>' +
+            '<div class="tags">' + tagsHtml + '</div>' +
+          '</div>' +
+          '<div class="check" role="button" tabindex="0" aria-label="Mark done" data-act="check" data-id="' + esc(day.id) + '">' + CHECK_SVG + '</div>' +
+        '</div>' + detailsHtml +
+      '</div>');
+  });
+  if(editMode){
+    const n = data.del.filter(function(id){ return PUB_INDEX[id] && PUB_INDEX[id].week === currentWeek; }).length;
+    if(n > 0) parts.push('<div class="row"><button class="btn" data-act="restore">Restore ' + n + ' removed item' + (n === 1 ? "" : "s") + ' in this week</button></div>');
+  }
+  daysEl.innerHTML = parts.join("");
+  window.scrollTo(0, y);
+}
+function render(){ pendingRender = false; renderHeader(); renderDays(); }
+function renderSoon(){
+  const a = document.activeElement;
+  if(a && a.matches && a.matches("#days input")){ pendingRender = true; return; }
+  render();
+}
+
+/* =====================================================================
+   8. EDITING (inline fields; deletes are arm-then-confirm)
+   ===================================================================== */
+function arm(btn){
+  disarm();
+  btn.dataset.orig = btn.textContent;
+  btn.textContent = btn.dataset.armtext || "Sure?";
+  btn.classList.add("armed");
+  armedBtn = btn;
+  armedTimer = setTimeout(disarm, ARM_MS);
+}
+function disarm(){
+  clearTimeout(armedTimer);
+  if(armedBtn){
+    if(armedBtn.isConnected && armedBtn.dataset.orig !== undefined){ armedBtn.textContent = armedBtn.dataset.orig; armedBtn.classList.remove("armed"); }
+    armedBtn = null;
+  }
+}
+function setText(id, val){
+  val = val.replace(/[\r\n]+/g, " ");
+  const ai = data.add.findIndex(function(a){ return a.id === id; });
+  if(ai >= 0){ data.add[ai].t = val; }
+  else if(PUB_INDEX[id]){
+    const pub = PUB_INDEX[id].t;
+    if(val === pub) delete data.edit[id]; else data.edit[id] = val;
+  } else return;
+  touch();
+}
+function doDelete(id){
+  const ai = data.add.findIndex(function(a){ return a.id === id; });
+  if(ai >= 0){ data.add = data.add.filter(function(a){ return a.id !== id && a.p !== id; }); }
+  else if(PUB_INDEX[id] && PUB_INDEX[id].kind !== "day" && PUB_INDEX[id].kind !== "title"){
+    if(data.del.indexOf(id) < 0) data.del.push(id);
+  } else return;
+  touch(); render();
+}
+function addFrom(forId, kind){
+  const inp = daysEl.querySelector('[data-addfor="' + forId + '"]');
+  if(!inp) return;
+  const v = (inp.value || "").replace(/\s+/g, " ").trim();
+  if(!v) return;
+  data.add.push({id:newId(), p:forId, k:kind, t:v});
+  touch(); render();
+  const again = daysEl.querySelector('[data-addfor="' + forId + '"]');
+  if(again && kind === "i"){ try{ again.focus(); }catch(e){} }
+}
+function toggleDone(id){
+  if(data.done[id]) delete data.done[id]; else data.done[id] = 1;
+  touch(); renderHeader(); renderDays();
+}
+
+/* =====================================================================
+   9. TEXT EXPORT / IMPORT
+   ===================================================================== */
+function buildExport(scope){
+  const ctx = makeCtx();
+  const L = [
+    "# Training Tracker export",
+    "# format: 1",
+    "# published: " + PUB_VERSION,
+    "# exported: " + new Date().toISOString(),
+    "#",
+    "# [x] = done, [ ] = not done. Edit the text after each [id]; keep the [id].",
+    "# Days are unindented, sections are indented 2 spaces, items 4 spaces.",
+    "# A line with no [id] is added as a new section (2 spaces) or item (4 spaces).",
+    "# Anything missing from a WEEK you paste back is removed from that week.",
+    ""
+  ];
+  PLAN.forEach(function(w){
+    if(scope === "week" && w.weekNum !== currentWeek) return;
+    L.push("WEEK " + w.weekNum + " · " + PHASE_LABEL[w.phase] + " · " + MON[w.monday.getMonth()] + " " + w.monday.getDate() + "–" + MON[w.sunday.getMonth()] + " " + w.sunday.getDate());
+    w.days.forEach(function(day){
+      const e = effDay(day, ctx);
+      L.push("[" + day.id + "] [" + (data.done[day.id] ? "x" : " ") + "] " + e.title);
+      e.blocks.forEach(function(b){
+        L.push("  [" + b.id + "] " + b.label);
+        b.items.forEach(function(it){ L.push("    [" + it.id + "] " + it.t); });
+      });
+    });
+    L.push("");
+  });
+  return L.join("\n");
+}
+
+function customKind(id){
+  const a = data.add.find(function(x){ return x.id === id; });
+  return a ? (a.k === "b" ? "block" : "item") : null;
+}
+function parseImport(text){
+  const out = {pub:PUB_VERSION, weeks:{}, warn:[]};
+  let wk = null, curDay = null, curBlock = null;
+  text.replace(/\r/g, "").split("\n").forEach(function(raw, ln){
+    const at = "Line " + (ln+1);
+    if(!raw.trim()) return;
+    const mp = raw.match(/^\s*#\s*published:\s*(\d+)/i);
+    if(mp){ out.pub = parseInt(mp[1], 10); return; }
+    if(/^\s*#/.test(raw)) return;
+    const mw = raw.match(/^\s*WEEK\s+(\d+)\b/i);
+    if(mw){
+      const n = parseInt(mw[1], 10);
+      curDay = null; curBlock = null;
+      if(n < 1 || n > TOTAL_WEEKS){ out.warn.push(at + ": week " + n + " doesn't exist — skipped"); wk = null; return; }
+      wk = out.weeks[n] || (out.weeks[n] = {days:[]});
+      return;
+    }
+    if(!wk){ out.warn.push(at + ": ignored (no WEEK header above it)"); return; }
+    const expanded = raw.replace(/\t/g, "    ");
+    const indent = expanded.match(/^ */)[0].length;
+    const body = expanded.trim();
+    let id = null, rest = body;
+    const m = body.match(ID_RE);
+    if(m){ id = m[1]; rest = m[2]; }
+    let kind = null;
+    if(id){
+      if(PUB_INDEX[id]) kind = PUB_INDEX[id].kind;
+      else if(id.indexOf("c-") === 0) kind = customKind(id) || (indent >= 4 ? "item" : "block");
+      else { out.warn.push(at + ": unknown id [" + id + "] — skipped"); return; }
+    } else {
+      kind = indent >= 4 ? "item" : (indent >= 2 ? "block" : "day");
+    }
+    if(kind === "day"){
+      if(!id){ out.warn.push(at + ": can't add new days — skipped"); curDay = null; curBlock = null; return; }
+      let done = null, title = rest;
+      const md = rest.match(/^\[( |x|X)\]\s?(.*)$/);
+      if(md){ done = md[1].toLowerCase() === "x"; title = md[2]; }
+      curDay = {id:id, title:title.trim(), done:done, blocks:[]};
+      curBlock = null;
+      wk.days.push(curDay);
+    } else if(kind === "title"){
+      return;
+    } else if(kind === "block"){
+      if(!curDay){ out.warn.push(at + ": section with no day above it — skipped"); return; }
+      const label = (id ? rest : rest.replace(/^[+\-*•]\s*/, "")).trim();
+      curBlock = {id:id, label:label, items:[]};
+      curDay.blocks.push(curBlock);
+    } else if(kind === "item"){
+      if(!curDay || !curBlock){ out.warn.push(at + ": item with no section above it — skipped"); return; }
+      const t = (id ? rest : rest.replace(/^[+\-*•]\s*/, "")).trim();
+      curBlock.items.push({id:id, t:t});
+    }
+  });
+  return out;
+}
+
+function customWeek(next, pid){
+  let guard = 0;
+  while(pid && guard++ < 10){
+    if(PUB_INDEX[pid]) return PUB_INDEX[pid].week;
+    const a = next.add.find(function(x){ return x.id === pid; });
+    if(!a) return 0;
+    pid = a.p;
+  }
+  return 0;
+}
+function computeImport(p){
+  const next = clone(data);
+  const st = {added:0, edited:0, removed:0, restored:0, done:0};
+  const replace = p.pub >= PUB_VERSION;
+  const delS = new Set(next.del);
+
+  function setEdit(id, val){
+    const pub = PUB_INDEX[id].t;
+    const cur = hasOwn(next.edit, id) ? next.edit[id] : pub;
+    if(val !== cur) st.edited++;
+    if(val === pub) delete next.edit[id]; else next.edit[id] = val;
+  }
+  function upsertCustom(id, parent, k, t){
+    const ex = next.add.find(function(a){ return a.id === id; });
+    if(ex){ if(ex.t !== t || ex.p !== parent){ st.edited++; ex.t = t; ex.p = parent; } }
+    else { next.add.push({id:id, p:parent, k:k, t:t}); st.added++; }
+  }
+
+  Object.keys(p.weeks).forEach(function(ns){
+    const n = parseInt(ns, 10);
+    const wkd = p.weeks[ns];
+    const week = PLAN[n-1];
+    const seen = new Set();
+    wkd.days.forEach(function(d){
+      if(!PUB_INDEX[d.id] || PUB_INDEX[d.id].week !== n) return;   // day from another week: ignore
+      seen.add(d.id);
+      if(d.done !== null){
+        const was = !!next.done[d.id];
+        if(d.done !== was){ st.done++; if(d.done) next.done[d.id] = 1; else delete next.done[d.id]; }
+      }
+      setEdit(d.id + ".t", d.title);
+      d.blocks.forEach(function(b){
+        let bid = b.id;
+        if(bid && PUB_INDEX[bid]){
+          seen.add(bid);
+          if(delS.has(bid)){ delS.delete(bid); st.restored++; }
+          setEdit(bid, b.label);
+        } else {
+          if(!bid) bid = newId();
+          seen.add(bid);
+          upsertCustom(bid, d.id, "b", b.label);
+        }
+        b.items.forEach(function(it){
+          let iid = it.id;
+          if(iid && PUB_INDEX[iid]){
+            seen.add(iid);
+            if(delS.has(iid)){ delS.delete(iid); st.restored++; }
+            setEdit(iid, it.t);
+          } else {
+            if(!iid) iid = newId();
+            seen.add(iid);
+            upsertCustom(iid, bid, "i", it.t);
+          }
+        });
+      });
+    });
+    if(replace){
+      week.days.forEach(function(day){
+        day.blocks.forEach(function(b){
+          if(!seen.has(b.id)){
+            if(!delS.has(b.id)){ delS.add(b.id); st.removed++; }
+          } else {
+            b.items.forEach(function(it){
+              if(!seen.has(it.id) && !delS.has(it.id)){ delS.add(it.id); st.removed++; }
+            });
+          }
+        });
+      });
+      const keep = next.add.filter(function(a){ return customWeek(next, a.p) !== n || seen.has(a.id); });
+      st.removed += next.add.length - keep.length;
+      next.add = keep;
+    }
+  });
+  next.del = Array.from(delS);
+  st.total = st.added + st.edited + st.removed + st.restored + st.done;
+  return {next:next, stats:st};
+}
+
+function selectTA(ta){
+  try{ ta.focus(); ta.select(); ta.setSelectionRange(0, ta.value.length); }catch(e){}
+}
+function doExport(){
+  const ta = $("expText");
+  ta.value = buildExport($("expScope").value);
+  selectTA(ta);
+  setMsg("expMsg", "ok", "Selected. Press and hold in the box, choose Copy, and paste it somewhere safe.");
+}
+function setMsg(id, cls, text, list){
+  const el = $(id);
+  el.className = "msg" + (cls ? " " + cls : "");
+  el.textContent = text;
+  if(list && list.length){
+    const ul = document.createElement("ul");
+    list.slice(0,8).forEach(function(w){ const li = document.createElement("li"); li.textContent = w; ul.appendChild(li); });
+    if(list.length > 8){ const li = document.createElement("li"); li.textContent = "…and " + (list.length - 8) + " more"; ul.appendChild(li); }
+    el.appendChild(ul);
+  }
+}
+function doImportPreview(){
+  const text = $("impText").value || "";
+  importNext = null; $("btnImpApply").disabled = true;
+  if(!text.trim()){ setMsg("impMsg", "err", "Paste some text first."); return; }
+  const p = parseImport(text);
+  const weeks = Object.keys(p.weeks);
+  if(weeks.length === 0){ setMsg("impMsg", "err", "No WEEK sections found — nothing to import.", p.warn); return; }
+  const r = computeImport(p);
+  const s = r.stats;
+  if(s.total === 0){ setMsg("impMsg", "ok", "Weeks " + weeks.join(", ") + ": no changes compared to what's already here.", p.warn); return; }
+  const bits = [];
+  if(s.added) bits.push(s.added + " added");
+  if(s.edited) bits.push(s.edited + " edited");
+  if(s.removed) bits.push(s.removed + " removed");
+  if(s.restored) bits.push(s.restored + " restored");
+  if(s.done) bits.push(s.done + " done-state change" + (s.done === 1 ? "" : "s"));
+  const note = p.pub < PUB_VERSION ? " (older backup — nothing gets removed)" : "";
+  importNext = r.next;
+  $("btnImpApply").disabled = false;
+  setMsg("impMsg", "ok", "Week" + (weeks.length === 1 ? " " : "s ") + weeks.join(", ") + ": " + bits.join(", ") + note + ". Tap Apply to make these changes.", p.warn);
+}
+function doImportApply(){
+  if(!importNext) return;
+  saveUndo("Before text import");
+  data = importNext; importNext = null;
+  $("btnImpApply").disabled = true;
+  touch(); render();
+  setMsg("impMsg", "ok", "Applied. You can undo it below.");
+}
+function doUndo(){
+  const u = loadUndo();
+  if(!u || !u.data) return;
+  data = normalize(u.data);
+  lsDel(LS_UNDO); refreshUndoBtn();
+  touch(); render();
+  setMsg("impMsg", "ok", "Restored: " + u.why.toLowerCase() + ".");
+}
+
+/* =====================================================================
+   10. JSONBIN SYNC  (localStorage = cache, bin = shared copy, last write wins)
+   ===================================================================== */
+async function jfetch(url, opts){
+  const ctl = (typeof AbortController !== "undefined") ? new AbortController() : null;
+  const to = setTimeout(function(){ if(ctl) ctl.abort(); }, FETCH_TIMEOUT);
+  let r;
+  try{
+    r = await fetch(url, Object.assign({}, opts, ctl ? {signal:ctl.signal} : {}));
+  }catch(e){
+    clearTimeout(to);
+    const err = new Error("Network error (" + (e && e.name === "AbortError" ? "timed out" : ((e && e.message) || "offline")) + ")");
+    err.net = true;
+    throw err;
+  }
+  clearTimeout(to);
+  let body = null;
+  try{ body = await r.json(); }catch(e){}
+  if(!r.ok){
+    const m = body && body.message ? ": " + body.message : "";
+    const err = new Error("HTTP " + r.status + m);
+    err.status = r.status;
+    err.fatal = (r.status === 400 || r.status === 401 || r.status === 403 || r.status === 404 || r.status === 422);
+    throw err;
+  }
+  return body;
+}
+function fatalErr(msg){ const e = new Error(msg); e.fatal = true; return e; }
+function classifyRemote(rec){
+  if(rec === null || typeof rec !== "object" || Array.isArray(rec)) return "foreign";
+  const keys = Object.keys(rec);
+  if(keys.length === 0) return "empty";
+  if(keys.length === 1 && keys[0] === "sample") return "empty";           // JSONBin's default "Hello World" bin
+  if(rec.app === APP_ID) return (typeof rec.v === "number" && rec.v > DATA_V) ? "newer" : "ours";
+  return "foreign";
+}
+
+async function reconcile(reason){
+  if(!cfg){ setStatus("local"); return {ok:false, msg:"Sync isn't set up."}; }
+  if(syncBusy){ syncAgain = true; return {ok:false, msg:"Another sync is still running — try again in a moment."}; }
+  syncBusy = true; syncAgain = false; lastPull = Date.now();
+  clearTimeout(retryTimer);
+  let result;
+  try{
+    setStatus(reason === "push" ? "saving" : "checking");
+    const body = await jfetch(JSONBIN + encodeURIComponent(cfg.binId) + "/latest", {headers:{"X-Master-Key":cfg.key}});
+    const rec = (body && hasOwn(body, "record")) ? body.record : body;
+    const kind = classifyRemote(rec);
+    if(kind === "foreign") throw fatalErr("this bin holds other data (not a training calendar) — nothing was written. Use a separate bin for this app");
+    if(kind === "newer") throw fatalErr("this bin was written by a newer version of the app — nothing was written");
+    const remote = (kind === "ours") ? normalize(rec) : null;
+    let action;
+    if(kind === "empty") action = "push";
+    else if(remote.updated > data.updated) action = "pull";
+    else if(remote.updated < data.updated) action = "push";
+    else action = "none";
+
+    if(action === "pull"){
+      if(data.updated > (cfg.synced || EPOCH) && hasContent(data)) saveUndo("Before pulling newer synced copy");
+      data = remote; saveLocal(); cfg.synced = data.updated; saveCfg();
+      result = {ok:true, action:action, msg:"Pulled the newer copy from the bin."};
+      renderSoon();
+    } else if(action === "push"){
+      const sent = data.updated;
+      const payload = JSON.stringify(data);
+      await jfetch(JSONBIN + encodeURIComponent(cfg.binId), {
+        method:"PUT",
+        headers:{"X-Master-Key":cfg.key, "Content-Type":"application/json", "X-Bin-Versioning":"false"},
+        body:payload
+      });
+      cfg.synced = sent; saveCfg();
+      result = {ok:true, action:action, msg:"Uploaded this device's data to the bin."};
+    } else {
+      cfg.synced = data.updated; saveCfg();
+      result = {ok:true, action:action, msg:"Already in sync."};
+    }
+    retryDelay = 0;
+    lastSyncedAt = hhmm();
+    setStatus(data.updated === cfg.synced ? "synced" : "saving");
+  }catch(e){
+    result = {ok:false, msg:(e && e.message) || String(e)};
+    const willRetry = !(e && e.fatal);
+    setStatus("error", result.msg, willRetry);
+    if(willRetry){
+      retryDelay = Math.min(60000, (retryDelay || 5000) * 2);
+      retryTimer = setTimeout(function(){ reconcile("retry"); }, retryDelay);
+    }
+  }finally{
+    syncBusy = false;
+    if(syncAgain){ syncAgain = false; setTimeout(function(){ reconcile("push"); }, 0); }
+  }
+  return result;
+}
+function schedulePush(){
+  clearTimeout(pushTimer);
+  if(!cfg){ setStatus("local"); return; }
+  setStatus("saving");
+  pushTimer = setTimeout(function(){ reconcile("push"); }, PUSH_DEBOUNCE);
+}
+function maybePull(){
+  if(!cfg) return;
+  const now = Date.now();
+  if(now - lastPull < FOCUS_THROTTLE) return;
+  lastPull = now;
+  reconcile("focus");
+}
+
+async function saveAndTest(){
+  const binId = ($("binId").value || "").replace(/\s+/g, "");
+  const key = ($("binKey").value || "").replace(/\s+/g, "");
+  if(!binId || !key){ setMsg("syncMsg", "err", "Enter both the Bin ID and the Master Key."); return; }
+  if(syncBusy){ setMsg("syncMsg", "err", "A sync is already running — try again in a moment."); return; }
+  const prev = cfg;
+  cfg = {binId:binId, key:key, synced:EPOCH};
+  setMsg("syncMsg", "", "Testing…");
+  const r = await reconcile("test");
+  if(r.ok){
+    saveCfg();
+    setMsg("syncMsg", "ok", "Connected ✓ — " + r.msg);
+  } else {
+    cfg = prev;
+    clearTimeout(retryTimer); retryDelay = 0;
+    setMsg("syncMsg", "err", "Not saved — " + r.msg);
+    if(cfg) setStatus("synced"); else setStatus("local");
+  }
+}
+async function syncNow(){
+  if(!cfg){ setMsg("syncMsg", "err", "Enter your Bin ID and Master Key first, then Save and test."); return; }
+  setMsg("syncMsg", "", "Syncing…");
+  const r = await reconcile("push");
+  setMsg("syncMsg", r.ok ? "ok" : "err", r.ok ? r.msg : r.msg);
+}
+function disconnect(){
+  cfg = null; saveCfg();
+  clearTimeout(pushTimer); clearTimeout(retryTimer);
+  $("binId").value = ""; $("binKey").value = "";
+  setMsg("syncMsg", "ok", "Disconnected. Your data stays on this device; nothing was deleted from the bin.");
+  setStatus("local");
+}
+
+/* =====================================================================
+   11. EVENTS + BOOT  (boot() is the last statement in this file)
+   ===================================================================== */
+function onClick(e){
+  const t = e.target.closest ? e.target.closest("[data-act]") : null;
+  if(armedBtn && t !== armedBtn) disarm();
+  if(!t) return;
+  const act = t.dataset.act, id = t.dataset.id;
+  switch(act){
+    case "check": toggleDone(id); break;
+    case "toggle":
+      if(editMode) break;
+      if(openDays.has(id)) openDays.delete(id); else openDays.add(id);
+      t.closest(".day").classList.toggle("open");
+      break;
+    case "edit": editMode = !editMode; render(); break;
+    case "panel":
+      panelOpen = (panelOpen === id) ? null : id;
+      if(panelOpen === "sync"){ $("binId").value = cfg ? cfg.binId : $("binId").value; $("binKey").value = cfg ? cfg.key : $("binKey").value; }
+      if(panelOpen === "text") refreshUndoBtn();
+      renderHeader();
+      break;
+    case "del": if(armedBtn !== t){ arm(t); } else { disarm(); doDelete(id); } break;
+    case "revert": delete data.edit[id]; touch(); render(); break;
+    case "additem": addFrom(id, "i"); break;
+    case "addblock": addFrom(id, "b"); break;
+    case "restore":
+      data.del = data.del.filter(function(x){ return !(PUB_INDEX[x] && PUB_INDEX[x].week === currentWeek); });
+      touch(); render(); break;
+    case "syncsave": saveAndTest(); break;
+    case "syncnow": syncNow(); break;
+    case "disconnect": if(armedBtn !== t){ arm(t); } else { disarm(); disconnect(); } break;
+    case "export": doExport(); break;
+    case "selectexp": selectTA($("expText")); break;
+    case "impreview": doImportPreview(); break;
+    case "impapply": doImportApply(); break;
+    case "undo": doUndo(); break;
+  }
+}
+function wire(){
+  document.addEventListener("click", onClick);
+  document.addEventListener("keydown", function(e){
+    const t = e.target;
+    if(e.key === "Enter" && t.dataset && t.dataset.addfor){
+      e.preventDefault();
+      const isBlock = !!PUB_INDEX[t.dataset.addfor] ? PUB_INDEX[t.dataset.addfor].kind === "day" : false;
+      addFrom(t.dataset.addfor, isBlock ? "b" : "i");
+    } else if((e.key === "Enter" || e.key === " ") && t.dataset && t.dataset.act === "check"){
+      e.preventDefault(); toggleDone(t.dataset.id);
+    }
+  });
+  daysEl.addEventListener("input", function(e){
+    const t = e.target;
+    if(t.dataset && t.dataset.edit) setText(t.dataset.edit, t.value);
+  });
+  document.addEventListener("focusout", function(){
+    if(pendingRender) setTimeout(function(){ if(pendingRender) render(); }, 0);
+  });
+  $("prevBtn").addEventListener("click", function(){ if(currentWeek > 1){ currentWeek--; render(); } });
+  $("nextBtn").addEventListener("click", function(){ if(currentWeek < TOTAL_WEEKS){ currentWeek++; render(); } });
+  jumpSelect.addEventListener("change", function(e){ currentWeek = parseInt(e.target.value, 10); render(); });
+  $("showKey").addEventListener("change", function(e){ $("binKey").type = e.target.checked ? "text" : "password"; });
+  window.addEventListener("focus", maybePull);
+  document.addEventListener("visibilitychange", function(){ if(!document.hidden) maybePull(); });
+  window.addEventListener("online", function(){ if(cfg){ lastPull = 0; maybePull(); } });
+}
+function pickDefaultWeek(){
+  const today = new Date();
+  for(const w of PLAN){ if(today >= w.monday && today <= addDays(w.sunday, 1)){ return w.weekNum; } }
+  if(today < PLAN[0].monday) return 1;
+  return TOTAL_WEEKS;
+}
+function boot(){
+  PLAN.forEach(function(w){
+    const opt = document.createElement("option");
+    opt.value = String(w.weekNum);
+    opt.textContent = "Week " + w.weekNum + " — " + PHASE_LABEL[w.phase];
+    jumpSelect.appendChild(opt);
+  });
+  loadLocal();                       // 1. read the local cache (sync, instant)
+  currentWeek = pickDefaultWeek();
+  wire();
+  render();                          // 2. first paint straight from the cache — no network wait
+  refreshUndoBtn();
+  if(cfg){ setStatus("checking"); reconcile("load"); }   // 3. only now talk to the network
+  else setStatus("local");
+}
+boot();
+</script>
+</body>
+</html>
